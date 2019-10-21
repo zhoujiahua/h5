@@ -1,0 +1,83 @@
+@import "comm";
+
+.wrap {
+    padding-top: 102/@rem;
+
+    .header {
+        height: 102/@rem;
+        background-color: #fc0;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .main {
+        .nav {
+            .nav-tab {
+                height: 100/@rem;
+                display: -webkit-flex;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                border: 1px solid blue;
+                // flex-flow: row-reverse;
+                // flex-flow: wrap-reverse;
+                // flex-flow: wrap;
+                // flex-flow: unset;
+                // justify-content: center;
+                // align-content: space-around;
+                // align-content: space-between;
+                // align-items: center;
+
+                li {
+                    width: 100% / @col6;
+                    height: 100 / @rem;
+                    background-color: green;
+                    text-align: center;
+                    line-height: 100 / @rem;
+                    font-size: 50 / @rem;
+                    color: #fff;
+                    &:nth-child(odd) {
+                        background-color: hotpink;
+                    }
+                }
+            }
+        }
+
+        .sect-tab {
+            .tab-box {
+                height: 500 / @rem;
+                display: -webkit-flex;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-around;
+                align-items: center;
+
+                a {
+                    height: 100 / @rem;
+                    background-color: skyblue;
+                    width: 100 / @rem;
+                    text-align: center;
+                    line-height: 100 / @rem;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .list {
+            display: flex;
+            height: 600 / @rem;
+            background-color: turquoise;
+            flex-direction: column-reverse;
+            justify-content: space-around;
+            align-items: center;
+
+            li {
+                height: 50 / @rem;
+                width: 90%;
+                background-color: #eee;
+                border-radius: 10 / @rem;
+            }
+        }
+    }
+}

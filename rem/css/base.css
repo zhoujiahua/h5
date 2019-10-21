@@ -1,0 +1,20 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  overflow: auto;
+  font-size: 0.55466667rem;
+  font-family: Arial, Helvetica, STHeiTi, sans-serif;
+}
+ol,
+ul {
+  list-style: none;
+}
