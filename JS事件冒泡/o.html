@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $.getJSON("/data.json", {},
+            function (res) {
+                var d = res.data,
+                    newDataWoman = [],
+                    newDataMan = []
+
+                $.each(d, function (k, v) {
+                    if (v.sex == "男") {
+                        newDataMan.push(v);
+                    } else {
+                        newDataWoman.push(v);
+                    }
+                })
+
+                // console.log(newDataWoman);
+                // console.log(newDataMan);
+
+                // for(item in newDataMan){
+                //     console.log(newDataMan[item]);
+                // }
+
+                var o = d.map(function (v) {
+                    // console.log(v)
+                    if(v.sex == "男") return v;
+                })
+
+                console.log(o)
+
+            }
+        );
+    </script>
+</body>
+
+</html>
