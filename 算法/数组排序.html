@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组排序</title>
+    <link href="https://cdn.bootcss.com/skeleton/2.0.4/skeleton.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="container">
+            <button id="event">数组排序</button>
+        </div>
+    </div>
+
+    <script>
+        /* 
+            数组逆序 reverse();
+        */
+        var arr = [11, 13, 55, 16, 99, 8, 88, 6];
+        console.log('原始数组：', arr.toString());
+
+        // 数组逆反
+        console.log('数组逆反：', arr.reverse().toString());
+
+        // 数组排序
+        console.log('sort排序：', arr.sort().join());
+
+        // a - b
+        console.log('sort排序(a - b)：', arr.sort(function (a, b) {
+            return a - b
+        }).join());
+
+        // b - a
+        console.log('sort排序(b - a)：', arr.sort(function (a, b) {
+            return b - a
+        }).join());
+
+        // arr.sort(function (a, b) {
+        //     console.log('a', a)
+        //     console.log('b', b)
+        // })
+
+        // 冒泡排序
+        var newArr = [];
+        for (var i = 0; i < arr.length; i++) {
+            console.log("---------" + arr[i] + "----------");
+            var temp;
+            for (var j = i; j < arr.length - 1; j++) {
+                console.log("j", arr[j])
+                console.log("j+1", arr[j + 1])
+            }
+            // newArr.push(temp);
+        }
+
+        console.log(newArr.toString());
+    </script>
+</body>
+
+</html>
