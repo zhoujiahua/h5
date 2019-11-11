@@ -44,19 +44,34 @@
         //     console.log('b', b)
         // })
 
-        // 冒泡排序
-        var newArr = [];
-        for (var i = 0; i < arr.length; i++) {
-            console.log("---------" + arr[i] + "----------");
-            var temp;
-            for (var j = i; j < arr.length - 1; j++) {
-                console.log("j", arr[j])
-                console.log("j+1", arr[j + 1])
+        // 冒泡排序 DESC
+        var arr1 = [11, 13, 55, 16, 99, 8, 88, 6];
+        for (var i = 0; i < arr1.length - 1; i++) {
+            for (var j = 0; j < arr1.length - i - 1; j++) {
+                if (arr1[j] < arr1[j + 1]) {
+                    var temp = arr1[j];
+                    arr1[j] = arr1[j + 1];
+                    arr1[j + 1] = temp;
+                }
             }
-            // newArr.push(temp);
         }
+        console.log("DESC排序：", arr1.toString());
 
-        console.log(newArr.toString());
+        // 冒泡排序 ASC
+        var arr2 = [11, 13, 55, 16, 99, 8, 88, 6];
+        for (var i = 0; i < arr2.length - 1; i++) {
+            console.log('数组长度：', arr2.length);
+            console.group('--i--', i);
+            for (var j = 0; j < arr2.length - i - 1; j++) {
+                console.log('--j--', j);
+                if (arr2[j] > arr2[j + 1]) {
+                    var temp = arr2[j];
+                    arr2[j] = arr2[j + 1];
+                    arr2[j + 1] = temp;
+                }
+            }
+        }
+        console.log("ASC排序：", arr2.toString());
     </script>
 </body>
 
